@@ -1,0 +1,116 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de fontes */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+/* Paleta de cores */
+:root {
+    --cor-principal: #4CAF50;
+    --cor-secundaria: #f0f0f0;
+    --cor-destaque: #FF5733;
+}
+
+/* Estilo do menu */
+nav {
+    background-color: var(--cor-principal);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo das seções */
+header, section, footer {
+    padding: 20px;
+    margin: 60px 0 0 0;
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+}
+
+section h2 {
+    color: var(--cor-principal);
+}
+
+section div {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--cor-destaque);
+    color: white;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Layouts responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header, section, footer {
+        padding: 10px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
